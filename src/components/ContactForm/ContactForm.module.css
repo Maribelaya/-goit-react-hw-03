@@ -1,10 +1,29 @@
-.name {
+.form {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px;
+  width: 50%;
 }
-
-.number {
+.formField {
+  display: flex;
+  flex-direction: column;
+  height: 50px;
 }
-
 .btn {
-  background-color: rgb(173, 173, 173);
+  background-color: rgb(223, 222, 222);
   border-radius: 10px;
+  padding: 8px;
+  width: 150px;
+  height: 40px;
+  align-self: center;
+}
+.btn:hover {
+  background-color: rgb(178, 178, 243);
+}
+.input {
+  height: 30px;
+}
+.error {
 }

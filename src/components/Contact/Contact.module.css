@@ -1,0 +1,22 @@
+.contact {
+  border: 1px solid black;
+  width: 280px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+.icon {
+  padding-right: 10px;
+}
+
+.btn {
+  background-color: rgb(208, 209, 209);
+  border-radius: 7%;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+}
