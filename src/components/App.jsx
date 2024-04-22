@@ -36,11 +36,6 @@ const App = () => {
     });
   };
 
-  // const onDelete = (id) => {
-  //   setContacts((prevContacts) =>
-  //     prevContacts.filter((contact) => contact.id !== id)
-  //   );
-  // };
   const onChange = (e) => {
     setFilter(e.target.value);
   };
