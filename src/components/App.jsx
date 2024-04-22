@@ -30,11 +30,17 @@ const App = () => {
     });
   };
 
-  const deleteContact = (contactId) => {
+  const onDelete = (id) => {
     setContacts((prevContacts) => {
-      return prevContacts.filter((contact) => contact.id !== contactId);
+      return prevContacts.filter((contact) => contact.id !== id);
     });
   };
+
+  // const onDelete = (id) => {
+  //   setContacts((prevContacts) =>
+  //     prevContacts.filter((contact) => contact.id !== id)
+  //   );
+  // };
   const onChange = (e) => {
     setFilter(e.target.value);
   };
@@ -47,7 +53,7 @@ const App = () => {
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox value={filter} onChange={onChange} />
-      <ContactList contacts={visibleContacts} onDelete={deleteContact} />
+      <ContactList contacts={visibleContacts} onDelete={onDelete} />
     </div>
   );
 };

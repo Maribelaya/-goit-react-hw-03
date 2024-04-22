@@ -28,3 +28,7 @@ const Contact = ({ id, name, number, onDelete }) => {
 };
 
 export default Contact;
+
+{
+  /* <button onClick={() => onDelete(item.id)}>Delete</button> */
+}
