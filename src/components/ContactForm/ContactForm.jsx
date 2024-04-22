@@ -28,6 +28,7 @@ const ContactForm = ({ onAdd }) => {
         onAdd({ id: Date.now(), ...values });
         actions.resetForm();
       }}
+      validationSchema={FeedbackSchema}
     >
       <Form className={css.form}>
         <div className={css.formField}>
@@ -48,7 +49,7 @@ const ContactForm = ({ onAdd }) => {
             name="number"
             id={numberFieldId}
           />
-          <ErrorMessage className={css.error} name="number" component="span" />
+          <ErrorMessage name="number" component="span" />
         </div>
         <button className={css.btn} type="submit">
           Add contact
@@ -58,33 +59,4 @@ const ContactForm = ({ onAdd }) => {
   );
 };
 
-//       validationSchema={userSchema}
-//       onSubmit={(values, actions) => {
-//         console.log(values);
-//         onAdd({ id: Date.now(), ...values });
-//         actions.resetForm();
-//       }}
-//     >
-//       <Form className={css.form} autoComplete="off">
-//         <div className={css.formGroup}>
-//           <label htmlFor={nameFieldId}>Username:</label>
-//           <Field type="text" name="username" id={nameFieldId} />
-//           <ErrorMessage
-//             className={css.error}
-//             name="username"
-//             component="span"
-//           />
-//         </div>
-
-//         <div className={css.formGroup}>
-//           <label htmlFor={accessFieldId}>Access:</label>
-//
-//           <ErrorMessage className={css.error} name="access" component="span" />
-//         </div>
-
-//         <button type="submit">Add user</button>
-//       </Form>
-//     </Formik>
-//   );
-// };
 export default ContactForm;
